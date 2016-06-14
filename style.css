@@ -1,0 +1,84 @@
+/*
+Theme Name:  Eden: Deception
+Theme URI:   https://gabrielebaldassarre.com
+Version:     1.0
+Description: This theme is specifically made for Eden: Deception minisite.
+Author:      Gabriele Baldassarre
+Author URI:  https://gabrielebaldassarre.com
+Template:    Divi
+*/
+
+
+
+#footer-info {
+display:none;
+}
+
+
+/*------------------------------------------------*/
+/*---------------[DROPDOWN MENU]------------------*/
+/*------------------------------------------------*/
+
+.fake-link {
+   pointer-events: none;
+   cursor: default;
+}
+
+.intro-sec-nav {
+  font-weight: bold;  
+}
+
+/*------------------------------------------------*/
+/*---------------------[FOOTER]-------------------*/
+/*------------------------------------------------*/
+
+.footer-form .row {
+  max-width: 1200px; }
+
+.footer-form textarea, .footer-form input {
+    border-radius: 3px !important;
+    background-color: rgba(0,0,0,0.32) !important;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    border: medium none !important;
+    box-sizing: border-box !important;
+    font: inherit;
+    font-size: 0.875rem;
+    font-weight: normal;
+    color: #f4eade;
+    /*padding: 1.3rem;*/ }
+    
+   .footer-form label {
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 0 0 1rem 0;
+    font-weight: bold; }
+    
+   .footer-form .submit {
+    background: none repeat scroll 0 0 #33383b !important;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+    border: medium none;
+    border-right:none;
+    padding: 0.7rem 3rem;
+    font-weight: bold;
+    float: right;
+    margin: 0; }
+    
+.footer-form .submit:hover {
+	background:#ed8c72 !important;
+}
+
+span.wpcf7-not-valid-tip {
+    color: #ed8c72 !important;
+    font-size: 0.7em !important;
+    display: inline !important;
+    font-weight: normal !important;
+}
+
+/*------------------------------------------------*/
+/*--------------[SIDEBAR by TheClue]--------------*/
+/*------------------------------------------------*/
+#sidebar .et_pb_widget a {
+color: #2f496e !important;
+}

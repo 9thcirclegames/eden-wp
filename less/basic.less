@@ -1,0 +1,54 @@
+/*------------------------------------------------*/
+/*-----------------[BASIC STYLES]-----------------*/
+/*------------------------------------------------*/
+
+#main-content {
+  background-image: url('images/lightpaperfibers.png');
+  background-color: #f4f1ef;
+  background-repeat: repeat;
+  background-position: left top;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  #main-content {
+    background-image: url('images/lightpaperfibers@2X.png');
+    background-size: 500px 300px;
+  }
+}
+
+@font-face {
+    font-family: 'uncial';
+    src: url('fonts/kellunc.ttf'); /*URL to font*/
+}
+
+/*------------------------------------------------*/
+/*------[Big Invisible Triangle - Quiroz.co]------*/
+/*------------------------------------------------*/
+
+/* To add a triangle divider, just add the big-triangle class in a fullwidth container in DIVI Builder */
+ 
+#et-main-area { overflow: hidden;} /* Hides all the items that float over the right margin */
+ 
+.big-triangle:after,.big-triangle:before {
+    content:'';
+    position:absolute;
+    bottom:0;
+    width:50%;
+    z-index:100;
+    border-bottom:50px solid #ffffff;
+    -moz-transform:rotate(0.000001deg);
+    -webkit-transform:rotate(0.000001deg);
+    -o-transform:rotate(0.000001deg);
+    -ms-transform:rotate(0.000001deg);
+    transform:rotate(0.000001deg);}
+ 
+.big-triangle:before{
+    right:50%;
+    border-right:1000px solid transparent;
+    border-left:1000px solid;}
+ 
+.big-triangle:after{
+    left:50%;
+    border-left:1000px solid transparent;
+    border-right:1000px solid;}
+    
+  

@@ -5,5 +5,5 @@ mv deploy-key ~/.ssh/deploy-key
 eval `ssh-agent -s` #start shh agent 
 ssh-add ~/.ssh/deploy-key
 chmod 600 config
-mv config ~/.ssh/config
+mv config.txt ~/.ssh/config
 

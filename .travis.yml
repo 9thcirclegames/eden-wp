@@ -10,7 +10,13 @@ env:
   - secure: CgAq0gV5BTNbXqDzUuWrK3z6a87paQC5U+Il/B28tgMnAi9Y5JQ0z2KUrpOsMt01twq5iD/v+RKv1EbBpwtJppf+2JQBIc2IOtahBpEl8CDS14e7CfQqq1765Je8PD63EH1ERAzIZO72te4B5kQztHIWSh9E+oT3SV2ARvFtAfxdlOU6LEwNmQ0wkxW/DhXJ8/y/8mRXlYgYXjalRF7LWBvxKKwKA2ID13OqKJX/miSvFjsYdzlVyz7NRq3xFx5nfYewFP76+pZ7WAegJUcpyhXU9xIbjzIMQxqNrInp7awxa5+8HjT0XAYlxFnckNSMZWwi9j2cVrcao4qpiyNhA92IwYqsmwrAXIIts6Yf8shHMZgoPTUX8FMAZjDX3f8bBOLN2VrMCyf4FXbtO9vY40Dvk1iVGXACe2q8IgDwr4BgUgZLj63IUl+audup3KcUuToemG81x6jWFyNXbdUi8tlp89REF/qw5ClZSXdKZNGzXHCzaiVHPVf3yBCRbuqEpELdsbuJ0KHHk4h1DAfQtKYOy7uISBhpbtEsENf2Ala8Yebo5kxbcTpxa3CrGxsVPYjBypZC8GzvZn5ziBK57cJSQB84te3DvjZLWFlJ0la0NXKUNFJJfWGS2jGwTacUdEfACZdFm+pDBL6zlxXL3BQycQOqVhwuh1dAKRInwFU=
 addons:
   ssh_known_hosts: 188.166.20.178
+# Handle git submodules yourself
+git:
+    submodules: false
+# Use sed to replace the SSH URL with the public URL, then initialize submodules
 before_install:
+- sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+- git submodule update --init --recursive
 - openssl aes-256-cbc -K $encrypted_dd5a8f02a79f_key -iv $encrypted_dd5a8f02a79f_iv
   -in stuff.tar.enc -out stuff.tar -d
 - tar xvf stuff.tar
